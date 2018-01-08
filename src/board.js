@@ -1,9 +1,10 @@
 import React from "react";
+import Cell from './cell'
 
 export default class Board extends React.Component {
 
-    renderCol(i) {
-        return <button className="square">{i}</button>
+    renderCall(i) {
+        return <Cell value={i} onClick={()=> console.log('click on sale ')} />
     }
 
     render() {
@@ -13,19 +14,19 @@ export default class Board extends React.Component {
             <div>
                 <div className="status">{status}</div>
                 <div className="board-row">
-                    {this.renderCol(0)}
-                    {this.renderCol(1)}
-                    {this.renderCol(2)}
+                    {this.renderCall(0)}
+                    {this.renderCall(1)}
+                    {this.renderCall(2)}
                 </div>
                 <div className="board-row">
-                    {this.renderCol(3)}
-                    {this.renderCol(4)}
-                    {this.renderCol(5)}
+                    {this.renderCall(3)}
+                    {this.renderCall(4)}
+                    {this.renderCall(5)}
                 </div>
                 <div className="board-row">
-                    {this.renderCol(6)}
-                    {this.renderCol(7)}
-                    {this.renderCol(8)}
+                    {this.renderCall(6)}
+                    {this.renderCall(7)}
+                    {this.renderCall(8)}
                 </div>
             </div>
         );
