@@ -4,7 +4,7 @@ import Cell from './cell'
 export default class Board extends React.Component {
 
     renderCall(i) {
-        return <Cell value={this.props.squares[i]}  onClick={ () => this.props.onClick(i)} />;
+        return <Cell onClick={ () => this.props.onClick(i)} />;
     }
 
     render() {
